@@ -77,7 +77,7 @@ async def generate(
     if model == None:
         raise HTTPException(
             status_code=400,
-            detail=[{"msg": "VLLM is not ready. Check the backend log for keyword 'init_model done.'"}]
+            detail=[{"msg": "VLM is not ready. Check the backend log for keyword 'init_model done.'"}]
         )
 
     with tracer.start_as_current_span("generate"):
